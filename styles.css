@@ -48,16 +48,33 @@ body {
   flex-grow: 1;
 }
 
-.selector {
+.button_div {
   margin-top: 48px;
   margin-right: 64px!important;
   width: 222px;
   height: 400px;
   border-radius: 15px;
   border: 3px solid rgb(158, 44, 179);
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  justify-content: center;
+  align-items: center;
 }
 
-#grid:hover {
-  background-color: black;
-  color: black;
+#button {
+  padding: 15px;
+  width: 150px;
+  border: solid 3px rgba(158, 44, 179, 1.0);
+  border-radius: 10px;
+  background-color: rgba(158, 44, 179, 0.1);
+  cursor: pointer;
+}
+
+#button:hover {
+  background-color: gray;
+}
+
+.grid:hover {
+  background-color: rebeccapurple;
 }
