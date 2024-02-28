@@ -21,7 +21,7 @@ body {
   font-family: 'Sixtyfour', sans-serif;
 }
 
-.grid-container {
+#grid-container {
   margin-top: 48px;
   margin-left: 0px;
   width: 600px;
@@ -39,13 +39,8 @@ body {
   flex-direction: row-reverse;
 }
 
-.grid {
-  background-color: grey;
-  height: 16px;
-  width: 16px;
-  border: 1px solid black;
-  flex-shrink: 1;
-  flex-grow: 1;
+.grid:hover {
+  background-color: darkgray;
 }
 
 .button_div {
@@ -73,8 +68,4 @@ body {
 
 #button:hover {
   background-color: gray;
-}
-
-.grid:hover {
-  background-color: rebeccapurple;
 }

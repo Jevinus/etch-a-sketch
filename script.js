@@ -4,18 +4,13 @@
 // Add an onclick for the grid divs that changes individual its color 
 
 const grid = document.createElement('div');
-grid.className='grid';
-grid.style.backgroundColor='grey';
-grid.style.border='1px solid black';
-grid.style.visibility='visible'
-let gridCount = Math.floor.grid() * 256;
+grid.classList.add('grid')
+const gridContainer = document.getElementById('grid-container')
+grid.style.backgroundColor = 'gray';
+grid.style.border = '2px solid black';
+grid.style.height = ' ';
 
-// Grid 1-100 button
-const selector = document.createElement('grid_selector');
+gridContainer.appendChild(grid);
 
-function gridScaler() {
-  let input = prompt('Input 1-100');
-  let inputConf = confirm('Confirm or Deny')
-}
+// Grid adjustment function
 
-gridScaler()
