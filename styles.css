@@ -9,6 +9,14 @@ body {
   background-color: rgb(179, 176, 185);
 }
 
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+
 .header {
   width: 800px;
   padding: 48px;
@@ -21,7 +29,7 @@ body {
   font-family: 'Sixtyfour', sans-serif;
 }
 
-#grid-container {
+#grid_container {
   margin-top: 48px;
   margin-left: 0px;
   width: 600px;
@@ -32,16 +40,15 @@ body {
   flex-direction: column;
 }
 
-.flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row-reverse;
+.grid {
+  height: 5vh;
+  width: 5vw;
 }
 
 .grid:hover {
   background-color: darkgray;
 }
+
 
 .button_div {
   margin-top: 48px;
