@@ -4,16 +4,15 @@
 // Add an onclick for the grid divs that changes individual its color 
 
 // Dynamic grid function allowing for 
-function grid(input) {
+function grid() {
   let container = document.getElementById('grid_container');
-  let gridInput = input;
-  prompt(gridInput);
+  let gridInput = prompt("Enter grid size:");
 
-  for (let i = 0; i <= input; i++) {
+  for (let i = 0; i <= gridInput; i++) {
     let grid = document.createElement('div');
     grid.className = 'grid';
-    grid.style.backgroundColor = 'blue';
-    grid.style.border = '2px solid black';
+    grid.style.backgroundColor = 'white';
+    grid.style.border = '1px solid black';
     grid.style.overflow = 'hidden';
     container.appendChild(grid);
   }
@@ -22,9 +21,8 @@ function grid(input) {
 }
 
 // Button to change grid size
-let gridButton = document.getElementsByClassName('grid_selector');
-gridButton.addEventListener('click', grid())
-
+let gridButton = document.getElementsByClassName('grid_selector')[0];
+gridButton.addEventListener('click', grid)
 // RGB value generator for grid cells
 function gridRGB() {
   const x = Math.floor(Math.random() * 256);
