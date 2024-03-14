@@ -21,16 +21,7 @@ function grid() {
 let gridButton = document.getElementsByClassName('grid_selector')[0];
 gridButton.addEventListener('click', grid)
 
-// RGB value generator for grid cells
-function gridRGB() {
-  const x = Math.floor(Math.random() * 256);
-  const y = Math.floor(Math.random() * 256);
-  const z = Math.floor(Math.random() * 256);
-  let RGBcolor = "rgb(" + x + ',' + y + ',' + z + ")"
-  console.log(RGBcolor)
-}
-
-// Reset grid
+// Resets grid 
 let clearButton = document.getElementsByClassName('grid_selector')[1];
 clearButton.addEventListener('click', function() {
   gridInput = 0; 
@@ -38,7 +29,19 @@ clearButton.addEventListener('click', function() {
   container.innerHTML = ''; 
 });
 
-let gridCells = document.getElementsByClassName('grid')
-gridCells.addEventListener('click', function() {
-  gridCells.style.backgroundcolor = gridRGB();
-});
+// Color value generator for gridcells
+function gridRGB() {
+  const x = Math.floor(Math.random() * 256);
+  const y = Math.floor(Math.random() * 256);
+  const z = Math.floor(Math.random() * 256);
+  let RGBcolor = "rgb(" + x + ',' + y + ',' + z + ")"
+  return RGBcolor
+}
+
+let gridCells = document.getElementsByClassName('grid');
+
+for (let i = 0; i < gridCells.length; i++) {
+  gridCells[i].addEventListener('click', function() {
+    gridCells[i].style.backgroundColor = gridRGB();
+  });
+}
