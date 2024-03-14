@@ -18,7 +18,7 @@ body {
 
 
 .header {
-  width: 800px;
+  width: 1000px;
   padding: 48px;
   margin-top: 86px;
   border: 3px solid rgb(158, 44, 179);
@@ -32,7 +32,7 @@ body {
 #grid_container {
   margin-top: 48px;
   margin-left: 0px;
-  width: 600px;
+  width: 800px;
   height: 400px!important;
   border: 3px solid rgb(158, 44, 179);
   border-radius: 15px;
@@ -44,6 +44,10 @@ body {
 .grid {
   height: 100%;
   width: 100%;
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .grid:hover {
