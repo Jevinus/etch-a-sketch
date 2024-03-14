@@ -1,9 +1,4 @@
-// Create grid elements in js for functionality
-// Create a button allowing for grid adjustment ranging from 1-100
-// Create a button allowing for the change of grid color using RGB
-// Add an onclick for the grid divs that changes individual its color 
-
-// Dynamic grid function
+// Allows user to change the amount of cells in the grid
 function grid() {
   let container = document.getElementById('grid_container');
   let gridInput = prompt("Enter grid size:");
@@ -17,11 +12,11 @@ function grid() {
   container.appendChild(grid_container);
 }
 
-// Grid size button
+// Targets button, when clicked invokes grid() function
 let gridButton = document.getElementsByClassName('grid_selector')[0];
 gridButton.addEventListener('click', grid)
 
-// Resets grid 
+// Resets grid by changing its value to 0 
 let clearButton = document.getElementsByClassName('grid_selector')[1];
 clearButton.addEventListener('click', function() {
   gridInput = 0; 
@@ -29,7 +24,7 @@ clearButton.addEventListener('click', function() {
   container.innerHTML = ''; 
 });
 
-// Color value generator for gridcells
+// Color value generator for gridCells
 function gridRGB() {
   const x = Math.floor(Math.random() * 256);
   const y = Math.floor(Math.random() * 256);
@@ -40,6 +35,7 @@ function gridRGB() {
 
 let gridCells = document.getElementsByClassName('grid');
 
+// Generates a backgroundcolor when clicked using 
 for (let i = 0; i < gridCells.length; i++) {
   gridCells[i].addEventListener('click', function() {
     gridCells[i].style.backgroundColor = gridRGB();
